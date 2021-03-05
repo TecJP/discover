@@ -96,9 +96,9 @@ const Utils = {
         return `${transformedDate[2]}/${transformedDate[1]}/${transformedDate[0]}`;
     },
     formatAmount(value) {
-        value = Number(value.replace(/\,\./g, "")) * 100;
+        value = value * 100;
 
-        return value;
+        return Math.round(value);
     },
     formatCurrency(value) {
         const signal = Number(value) < 0 ? "-" : "";
